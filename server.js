@@ -2,7 +2,6 @@ import express from 'express'
 import dotenv from 'dotenv'
 import check from './middleware.js'
 import { getData } from './japi.js';
-const port = 3000
 const app = express();
 app.use(express.json());
 dotenv.config();
@@ -34,6 +33,6 @@ app.post('/login', (req, res) => {
   res.send({status: 'ok', message: 'Login endpoint is working!........'})
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(process.env.PORT, () => {
+  console.log(`http://localhost:${process.env.PORT}`);
 })
