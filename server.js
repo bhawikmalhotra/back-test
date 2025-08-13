@@ -23,6 +23,11 @@ app.get('/test',check, (req, res) => {
     })
 })
 
+// send body in postman
+app.get("/a", (req,res) => {
+  res.json({staus: "success", message: "A endpoint is working!.....", data: req.body});
+});
+
 app.get('/data', check, async (req, res) => {
    const data = await getData();
     res.json({ status: 'ok', data });
