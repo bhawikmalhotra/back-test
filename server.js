@@ -1,7 +1,8 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import check from './middleware.js'
-import { getData } from './japi.js';
+import { getData } from './app/API/web/testAPI.js'
+
 const app = express();
 app.use(express.json());
 dotenv.config();
